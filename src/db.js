@@ -36,11 +36,60 @@ let capsEntries = entries.map((entry) => [
 ]);
 sequelize.models = Object.fromEntries(capsEntries);
 
-const { Model1, Model2 } = sequelize.models;
+const {
+  Event_Sponsor,
+  Event,
+  Followup,
+  Participation,
+  Purchase,
+  Sponsor,
+  Ticket,
+  User,
+} = sequelize.models;
 
 // Aca vendrian las relaciones
-// Model2.belongsToMany(Model1, { through: "MiddleModel" });
-// Model1.belongsToMany(Model2, { through: "MiddleModel" });
+// Associations
+
+User.belongsToMany(Event, {
+  through: Participation,
+  foreignKey: "id_user",
+});
+
+Event.belongsToMany(User, {
+  through: Participation,
+  foreignKey: "id_event",
+});
+
+User.belongsToMany(User, {
+  as: "Follower", //Seguidor
+  through: Followup,
+  foreignKey: "id_usuario_seguidor",
+});
+
+User.belongsToMany(User, {
+  as: "Followee", //Seguido
+  through: Followup,
+  foreignKey: "id_usuario_seguido",
+});
+
+Event.hasMany(Ticket, { foreignKey: "id_event" });
+Ticket.belongsTo(Event, { foreignKey: "id_event" });
+
+User.hasMany(Purchase, { foreignKey: "id_user" });
+Purchase.belongsTo(User, { foreignKey: "id_user" });
+
+Ticket.hasMany(Purchase, { foreignKey: "id_ticket" });
+Purchase.belongsTo(Ticket, { foreignKey: "id_ticket" });
+
+Event.belongsToMany(Sponsor, {
+  through: Event_Sponsor,
+  foreignKey: "id_event",
+});
+
+Sponsor.belongsToMany(Event, {
+  through: Event_Sponsor,
+  foreignKey: "id_sponsor",
+});
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
