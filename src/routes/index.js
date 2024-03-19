@@ -1,12 +1,10 @@
 const { Router } = require("express");
-// const driversRouter = require("./driversRouter");
-// const teamsRouter = require("./teamsRouter");
+const userRouter = require("./userRouter");
+const eventRouter = require("./eventRouter");
 
 const router = Router();
 
-// router.use("/drivers", driversRouter);
-router.use("/", (req,res)=>{
-  console.log("first endpoint")
-});
+router.use("/api/v1/", eventRouter);
+router.use("/api/v1/", userRouter);
 
 module.exports = router;
