@@ -63,13 +63,13 @@ Event.belongsToMany(User, {
 User.belongsToMany(User, {
   as: "Follower", //Seguidor
   through: Followup,
-  foreignKey: "id_usuario_seguidor",
+  foreignKey: "id_user_follower", //id_usuario_seguidor
 });
 
 User.belongsToMany(User, {
   as: "Followee", //Seguido
   through: Followup,
-  foreignKey: "id_usuario_seguido",
+  foreignKey: "id_user_followee", //id_usuario_seguido
 });
 
 Event.hasMany(Ticket, { foreignKey: "id_event" });
@@ -92,6 +92,6 @@ Sponsor.belongsToMany(Event, {
 });
 
 module.exports = {
-  ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
-  conn: sequelize, // para importart la conexión { conn } = require('./db.js');
+  ...sequelize.models, 
+  conn: sequelize, 
 };
