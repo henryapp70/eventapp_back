@@ -5,9 +5,9 @@ const deleteOneEventHandler = require("../handlers/eventHandler/deleteOneEventHa
 const getAllEventsHandler = require("../handlers/eventHandler/getAllEventsHandler");
 const updateOneEventHandler = require("../handlers/eventHandler/updateOneEventHandler");
 
-router.route("/registerevent").post(registerEventHandler);
-router.route("/deleteevent/:id").delete(deleteOneEventHandler);
 router.route("/getallevents").get(getAllEventsHandler);
+router.route("/registerevent").post(registerEventHandler);
 router.route("/updateevent/:id").put(updateOneEventHandler);
+router.route("/deleteevent/:id").delete(deleteOneEventHandler);
 
 module.exports = router;

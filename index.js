@@ -17,12 +17,12 @@ conn
       console.log(`Server listening on port ${port}`);
     });
   })
-  .then(() => populateSponsor())
+  // .then(() => populateSponsor())
   .then(() => populateUser())
   .then(() => populateEvent())
   .then(() => populateParticipation())
-  .then(() => populateFollowup())
-  .then(() => populateEvent_Sponsor())
+  // .then(() => populateFollowup())
+  // .then(() => populateEvent_Sponsor())
   .then(() => populateTicket())
-  .then(() => populatePurchase())
+  // .then(() => populatePurchase())
   .catch((error) => console.error(error));
