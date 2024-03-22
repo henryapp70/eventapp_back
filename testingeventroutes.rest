@@ -5,7 +5,7 @@ GET http://localhost:3001/api/v1/getallevents
 
 ### get one event
 ### http://localhost:3001/api/v1/getallevents/:id --> where id is id_event
-GET http://localhost:3001/api/v1/getallevents/1
+GET http://localhost:3001/api/v1/getallevents/2
 
 ### register an event
 ### http://localhost:3001/api/v1/registerevent/:id --> where id is id_user
@@ -30,7 +30,7 @@ Content-Type: application/json
 
 ### update one event
 ### http://localhost:3001/api/v1/updateevent/:idUser/:idEvent
-PUT http://localhost:3001/api/v1/updateevent/3/3
+PUT http://localhost:3001/api/v1/updateevent/2/3
 Content-Type: application/json
 
 {
@@ -51,4 +51,4 @@ Content-Type: application/json
 
 ### delete one event
 ### http://localhost:3001/api/v1/deleteevent/:idUser/:idEvent
-DELETE http://localhost:3001/api/v1/deleteevent/3/3
+DELETE http://localhost:3001/api/v1/deleteevent/2/3

@@ -1,20 +1,14 @@
-const { Event } = require("../../db");
+const getEventController = require("../../controllers/eventController/getEventController");
 
 const getEventHandler = async (req, res) => {
   const { id } = req.params;
-
-  try {
-    const event = await Event.findByPk(id);
-
-    if (!event) {
-      return res.status(404).json({ message: "Event not found" });
-    }
-
-    res.json(event);
-  } catch (error) {
-    console.error("Error fetching event:", error);
-    res.status(500).json({ message: "Internal server error" });
+  const { success, event, msg } = await getEventController(id);
+  if (success) {
+    res.status(200).json(event);
+  } else {
+    res.status(404).json({ message: msg });
   }
 };
 
 module.exports = getEventHandler;
+
