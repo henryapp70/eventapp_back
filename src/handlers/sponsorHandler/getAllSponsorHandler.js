@@ -1,8 +1,8 @@
-const { Sponsor } = require('../../db');
+const getAllSponsorController = require('../../controllers/sponsorController/getAllSponsorController');
 
 const getAllSponsorHandler = async (req, res) => {
   try {
-    const sponsors = await Sponsor.findAll();
+    const sponsors = await getAllSponsorController();
     res.json(sponsors);
   } catch (error) {
     console.error("Error al obtener todos los patrocinadores:", error);
@@ -11,3 +11,4 @@ const getAllSponsorHandler = async (req, res) => {
 };
 
 module.exports = getAllSponsorHandler;
+
