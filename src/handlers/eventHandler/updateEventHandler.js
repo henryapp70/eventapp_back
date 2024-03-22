@@ -1,7 +1,6 @@
 const { User, Event, Event_Sponsor, Sponsor } = require("../../db");
 
 const updateEventHandler = async (req, res) => {
-  console.log("LLego aquí");
   const { idUser, idEvent } = req.params;
   const {
     name,
@@ -19,16 +18,18 @@ const updateEventHandler = async (req, res) => {
 
   try {
     const user = await User.findByPk(idUser);
+    console.log(user);
     if (!user) {
       return res.status(400).json({ msg: "User not found" });
     }
 
     let event = await Event.findByPk(idEvent);
+    // return res.json(event)
     if (!event) {
       return res.status(404).json({ msg: "Event not found" });
     }
 
-    if (user.id_user === event.id_event || user.type_user === "admin") {
+    if (user.id_user === event.id_user || user.type_user === "admin") {
       // Update event details
       event = await event.update({
         name,
@@ -58,7 +59,7 @@ const updateEventHandler = async (req, res) => {
 
       res.status(200).json({ event, msg: "Event updated successfully" });
     } else {
-      return res.status(400).json({ msg: "You cannot update an event" });
+      return res.status(400).json({ msg: "You cannot update this event" });
     }
   } catch (error) {
     console.error("Error updating event:", error);
