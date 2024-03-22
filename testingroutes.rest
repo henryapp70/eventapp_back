@@ -1,0 +1,29 @@
+###
+GET http://localhost:3001/api/v1/getalltickets
+
+###
+GET http://localhost:3001/api/v1/getalltickets/2
+
+###
+POST http://localhost:3001/api/v1/createticket/3
+Content-Type: application/json
+
+{ 
+  "ticket_type": "VIP",
+  "price":47, 
+  "available_quantity": 3000, 
+  "sell_by_date": "2025-10-01"
+}
+
+###
+PUT http://localhost:3001/api/v1/updateticket/3
+Content-Type: application/json
+
+{
+  "ticket_type": "High School Discount",
+  "price": 20.0,
+  "available_quantity": 2000,
+  "sell_by_date": "2025-10-01",
+  "id_event": 3
+}
+

@@ -27,6 +27,15 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
+      type_user: {
+        type: DataTypes.STRING,
+        defaultValue: "registered",
+        allowNull: false,
+      },
+      image: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        allowNull: true,
+      },
     },
     { timestamps: false }
   );
