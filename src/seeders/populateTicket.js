@@ -9,6 +9,7 @@ async function populateTicket() {
         available_quantity: 10000,
         sell_by_date: "2025-10-01",
         id_event: 1,
+        id_user: 1,
       },
       {
         ticket_type: "VIP",
@@ -16,6 +17,7 @@ async function populateTicket() {
         available_quantity: 500,
         sell_by_date: "2025-10-01",
         id_event: 2,
+        id_user: 1,
       },
       {
         ticket_type: "Student Discount",
@@ -23,6 +25,7 @@ async function populateTicket() {
         available_quantity: 2000,
         sell_by_date: "2025-10-01",
         id_event: 3,
+        id_user: 2,
       },
       {
         ticket_type: "Early Bird",
@@ -30,6 +33,7 @@ async function populateTicket() {
         available_quantity: 1000,
         sell_by_date: "2025-10-01",
         id_event: 4,
+        id_user: 2
       },
     ]);
 
