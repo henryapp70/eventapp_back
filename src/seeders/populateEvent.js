@@ -13,6 +13,11 @@ async function populateEvent() {
         end_hour: "17:00:00",
         location: "Convention Center",
         event_type: "Conference",
+        access: "paid",
+        id_user: 1,
+        image: [
+          "https://images.pexels.com/photos/18818714/pexels-photo-18818714/free-photo-of-gallery-in-italy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        ],
       },
       {
         name: "Art Exhibition",
@@ -24,6 +29,11 @@ async function populateEvent() {
         end_hour: "18:00:00",
         location: "Art Gallery",
         event_type: "Exhibition",
+        access: "free",
+        id_user: 2,
+        image: [
+          "https://images.pexels.com/photos/18818714/pexels-photo-18818714/free-photo-of-gallery-in-italy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        ],
       },
       {
         name: "Music Festival",
@@ -35,6 +45,11 @@ async function populateEvent() {
         end_hour: "23:00:00",
         location: "Outdoor Venue",
         event_type: "Festival",
+        access: "paid",
+        id_user: 1,
+        image: [
+          "https://images.pexels.com/photos/18818714/pexels-photo-18818714/free-photo-of-gallery-in-italy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        ],
       },
       {
         name: "Summer Jazz Fest",
@@ -46,6 +61,11 @@ async function populateEvent() {
         end_hour: "22:00:00",
         location: "City Park Amphitheater",
         event_type: "Music Festival",
+        access: "free",
+        id_user: 2,
+        image: [
+          "https://images.pexels.com/photos/18818714/pexels-photo-18818714/free-photo-of-gallery-in-italy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        ],
       },
     ]);
 

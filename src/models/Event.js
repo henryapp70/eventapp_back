@@ -48,6 +48,15 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
+      access: {
+        type: DataTypes.STRING,
+        defaultValue: "free",
+        allowNull: true,
+      },
+      image: {
+        type: DataTypes.ARRAY(DataTypes.STRING), 
+        allowNull: true,
+      },
     },
     { timestamps: false }
   );

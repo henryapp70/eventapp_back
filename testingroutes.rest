@@ -26,3 +26,4 @@ Content-Type: application/json
   "sell_by_date": "2025-10-01",
   "id_event": 3
 }
+
