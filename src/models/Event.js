@@ -43,7 +43,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      event_type: {
+      category: {
         //tipo_evento
         type: DataTypes.STRING,
         allowNull: true,
@@ -54,7 +54,11 @@ module.exports = (sequelize) => {
         allowNull: true,
       },
       image: {
-        type: DataTypes.ARRAY(DataTypes.STRING), 
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        allowNull: true,
+      },
+      city: {
+        type: DataTypes.STRING,
         allowNull: true,
       },
     },
