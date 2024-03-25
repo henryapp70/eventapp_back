@@ -3,6 +3,10 @@
 ### get all events
 GET http://localhost:3001/api/v1/getallevents
 
+### get events criterion, filter, order
+### http://localhost:3001/api/v1/getallevents?criterion=&filter=&order
+GET http://localhost:3001/api/v1/getallevents?criterion=city&filter=Paris&order=&from=1&to=3
+
 ### get one event
 ### http://localhost:3001/api/v1/getallevents/:id --> where id is id_event
 GET http://localhost:3001/api/v1/getallevents/2
