@@ -1,5 +1,5 @@
 const logoutHandler = (req, res) => {
-  res.json({ msg: "logoutHandler working" });
+  res.json({ msg: "you are logged out!" });
 };
 
 module.exports = logoutHandler;
