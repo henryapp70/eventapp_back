@@ -35,6 +35,14 @@ async function populateTicket() {
         id_event: 4,
         id_user: 2
       },
+      {
+        ticket_type: "Charity",
+        price: 70.0,
+        available_quantity: 1000,
+        sell_by_date: "2025-10-01",
+        id_event: 4,
+        id_user: 1
+      },
     ]);
 
     console.log("Ticket table populated successfully");
