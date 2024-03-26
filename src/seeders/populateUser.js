@@ -34,7 +34,7 @@ async function populateUser() {
       },
       {
         name: "John Jackson",
-        email: "johm.jackson@example.com",
+        email: "john.jackson@example.com",
         password: "secretpassword",
         interests: "Traveling, Reading, Jogging",
         image: [
