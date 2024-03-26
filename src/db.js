@@ -91,6 +91,16 @@ Sponsor.belongsToMany(Event, {
   foreignKey: "id_sponsor",
 });
 
+//
+User.hasMany(Sponsor, { foreignKey: "id_user" });
+Sponsor.belongsTo(User, { foreignKey: "id_user" });
+
+User.hasMany(Ticket, { foreignKey: "id_user" });
+Ticket.belongsTo(User, { foreignKey: "id_user" });
+
+User.hasMany(Event, { foreignKey: "id_user" });
+Event.belongsTo(User, { foreignKey: "id_user" });
+
 module.exports = {
   ...sequelize.models, 
   conn: sequelize, 

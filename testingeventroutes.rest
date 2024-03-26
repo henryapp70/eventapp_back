@@ -1,0 +1,58 @@
+### event end points
+
+### get all events
+GET http://localhost:3001/api/v1/getallevents
+
+### get events criterion, filter, order
+### http://localhost:3001/api/v1/getallevents?criterion=&filter=&order
+GET http://localhost:3001/api/v1/getallevents?criterion=city&filter=Paris&order=&from=1&to=3
+
+### get one event
+### http://localhost:3001/api/v1/getallevents/:id --> where id is id_event
+GET http://localhost:3001/api/v1/getallevents/2
+
+### register an event
+### http://localhost:3001/api/v1/registerevent/:id --> where id is id_user
+POST http://localhost:3001/api/v1/registerevent/1
+Content-Type: application/json
+
+{
+  "name": "Winter Wonderland Market",
+  "description": "An enchanting market filled with festive delights and holiday cheer.",
+  "start_date": "2025-12-05",
+  "end_date": "2025-12-20",
+  "start_hour": "10:00:00",
+  "end_hour": "20:00:00",
+  "location": "Downtown Square",
+  "event_type": "Holiday Market",
+  "access": "paid",
+  "image": [
+    "https://images.pexels.com/photos/5331815/pexels-photo-5331815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  ],
+  "sponsors":[1,2]
+}
+
+### update one event
+### http://localhost:3001/api/v1/updateevent/:idUser/:idEvent
+PUT http://localhost:3001/api/v1/updateevent/2/3
+Content-Type: application/json
+
+{
+  "name": "Summer Music Festival",
+  "description": "A vibrant music festival featuring live performances from top artists.",
+  "start_date": "2025-07-15",
+  "end_date": "2025-07-17",
+  "start_hour": "12:00:00",
+  "end_hour": "23:59:59",
+  "location": "Beachside Park",
+  "event_type": "Music Festival",
+  "access": "paid",
+  "image": [
+    "https://images.pexels.com/photos/20582013/pexels-photo-20582013/free-photo-of-white-horses-grazing-green-grass-on-a-pasture.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load"
+  ],
+  "sponsors": [1, 2, 3]
+}
+
+### delete one event
+### http://localhost:3001/api/v1/deleteevent/:idUser/:idEvent
+DELETE http://localhost:3001/api/v1/deleteevent/2/3

@@ -1,13 +1,15 @@
 const { Router } = require("express");
 const router = Router();
 const registerEventHandler = require("../handlers/eventHandler/registerEventHandler");
-const deleteOneEventHandler = require("../handlers/eventHandler/deleteOneEventHandler");
+const deleteEventHandler = require("../handlers/eventHandler/deleteEventHandler");
 const getAllEventsHandler = require("../handlers/eventHandler/getAllEventsHandler");
-const updateOneEventHandler = require("../handlers/eventHandler/updateOneEventHandler");
+const updateEventHandler = require("../handlers/eventHandler/updateEventHandler");
+const getEventHandler = require("../handlers/eventHandler/getEventHandler");
 
-router.route("/registerevent").post(registerEventHandler);
-router.route("/deleteevent/:id").delete(deleteOneEventHandler);
 router.route("/getallevents").get(getAllEventsHandler);
-router.route("/updateevent/:id").put(updateOneEventHandler);
+router.route("/getallevents/:id").get(getEventHandler);
+router.route("/registerevent/:id").post(registerEventHandler);
+router.route("/updateevent/:idUser/:idEvent").put(updateEventHandler);
+router.route("/deleteevent/:idUser/:idEvent").delete(deleteEventHandler);
 
 module.exports = router;

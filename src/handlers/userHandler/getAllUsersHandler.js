@@ -2,6 +2,7 @@ const {User} = require ("../../db.js")
 
 const getAllUsersHandler = async (req, res) => {
 
+
   try{
     const users = await User.findAll();
     const allUsers = users.map(

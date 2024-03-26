@@ -12,7 +12,8 @@ const getOneUsersHandler = async (req, res) => {
   return res.status(200).json(oneUser)
   } catch (error){
     return res.status(400).send(error.message)
+
   }
 };
 
-module.exports = getOneUsersHandler;
+module.exports = getOneUserHandler;
