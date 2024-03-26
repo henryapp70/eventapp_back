@@ -1,0 +1,3 @@
+### to get all tickets associated with an event
+### http://localhost:3001/api/v1/getticketstoevent/:idEvent
+GET http://localhost:3001/api/v1/getticketstoevent/4
