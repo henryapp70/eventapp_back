@@ -1,15 +1,18 @@
-const { User } = require("../../db");
-
-const getOneUserHandler = async (req, res) => {
-  const { id } = req.params;
-  try {
-    const user = await User.findOne({ where: { id_user: id } });
-    if (!user) {
-      return res.status(200).json({ msg: `there is no user with id ${id}` });
+const {User} = require("../../db.js")
+const getOneUsersHandler = async (req, res) => {
+  try{
+    const oneUserDB = await User.findByPk(req.params.id)
+    const oneUser = {
+      id_user: oneUserDB.id_user,
+      name: oneUserDB.name,
+      email: oneUserDB.email,
+      password: oneUserDB.password,
+      interests: oneUserDB.interests
     }
-    res.status(200).json(user);
-  } catch (error) {
-    res.status(400).json({ msg: error });
+  return res.status(200).json(oneUser)
+  } catch (error){
+    return res.status(400).send(error.message)
+
   }
 };
 
