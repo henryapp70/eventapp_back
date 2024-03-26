@@ -1,0 +1,35 @@
+### login
+POST http://localhost:3001/api/v1/login
+Content-Type: application/json
+
+# {
+#   "email": "jane.smith@example.com",
+#   "password": "securepassword"
+# }
+
+{
+  "email": "jack.johnson@example.com",
+  "password": "secret123"
+}
+
+### register
+POST http://localhost:3001/api/v1/register
+Content-Type: application/json
+
+{
+  "name": "Jack Johnson",
+  "email": "jack.johnson@example.com",
+  "password": "secret123",
+  "image": ["https://images.pexels.com/photos/16373044/pexels-photo-16373044/free-photo-of-legs-in-sneakers.jpeg"]
+}
+
+### logout
+POST http://localhost:3001/api/v1/logout
+
+
+### get one user
+GET http://localhost:3001/api/v1/getoneuser/4
+
+### get all users
+GET http://localhost:3001/api/v1/getallusers
+
