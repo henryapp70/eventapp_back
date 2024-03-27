@@ -1,64 +1,64 @@
-const { Event } = require("../../db");
-const removeDuplicates = require("../../utils/removeDuplicates");
+// const { Event } = require("../../db");
+// const removeDuplicates = require("../../utils/removeDuplicates");
 
-const getAllEventsController = async (criterion, filter, order, from, to) => {
-  let events;
+// const getAllEventsController = async (criterion, filter, order, from, to) => {
+//   let events;
 
-  try {
-    events = await Event.findAll();
+//   try {
+//     events = await Event.findAll();
 
-    if (!events || events.length === 0) {
-      throw new Error("No events found");
-    }
+//     if (!events || events.length === 0) {
+//       throw new Error("No events found");
+//     }
 
-    if (!criterion && !filter && !order) {
-      return from ? events.slice(from - 1, to) : events;
-    }
+//     if (!criterion && !filter && !order) {
+//       return from ? events.slice(from - 1, to) : events;
+//     }
 
-    if (criterion && filter) {
-      const filteredEvents = events.filter(
-        (event) => event[criterion] === filter
-      );
-      return sortAndPaginate(filteredEvents, order, from, to);
-    }
+//     if (criterion && filter) {
+//       const filteredEvents = events.filter(
+//         (event) => event[criterion] === filter
+//       );
+//       return sortAndPaginate(filteredEvents, order, from, to);
+//     }
 
-    if (filter) {
-      const filteredByCategory = events.filter((event) =>
-        event.category.includes(filter)
-      );
-      const filteredByDescription = events.filter((event) =>
-        event.description.includes(filter)
-      );
-      const filteredByLocation = events.filter((event) =>
-        event.location.includes(filter)
-      );
-      const filteredByName = events.filter((event) =>
-        event.name.includes(filter)
-      );
-      const allFiltered = [
-        ...filteredByCategory,
-        ...filteredByDescription,
-        ...filteredByLocation,
-        ...filteredByName,
-      ];
-      const uniqueObjects = removeDuplicates(allFiltered);
-      return sortAndPaginate(uniqueObjects, order, from, to);
-    }
-  } catch (error) {
-    throw new Error("Error fetching events: " + error.message);
-  }
-};
+//     if (filter) {
+//       const filteredByCategory = events.filter((event) =>
+//         event.category.includes(filter)
+//       );
+//       const filteredByDescription = events.filter((event) =>
+//         event.description.includes(filter)
+//       );
+//       const filteredByLocation = events.filter((event) =>
+//         event.location.includes(filter)
+//       );
+//       const filteredByName = events.filter((event) =>
+//         event.name.includes(filter)
+//       );
+//       const allFiltered = [
+//         ...filteredByCategory,
+//         ...filteredByDescription,
+//         ...filteredByLocation,
+//         ...filteredByName,
+//       ];
+//       const uniqueObjects = removeDuplicates(allFiltered);
+//       return sortAndPaginate(uniqueObjects, order, from, to);
+//     }
+//   } catch (error) {
+//     throw new Error("Error fetching events: " + error.message);
+//   }
+// };
 
-const sortAndPaginate = (events, order, from, to) => {
-  const sortedEvents =
-    order === "DESC" ? sortEventsDesc(events) : sortEventsAsc(events);
-  return from ? sortedEvents.slice(from - 1, to) : sortedEvents;
-};
+// const sortAndPaginate = (events, order, from, to) => {
+//   const sortedEvents =
+//     order === "DESC" ? sortEventsDesc(events) : sortEventsAsc(events);
+//   return from ? sortedEvents.slice(from - 1, to) : sortedEvents;
+// };
 
-const sortEventsDesc = (events) =>
-  events.sort((a, b) => new Date(b.start_date) - new Date(a.start_date));
+// const sortEventsDesc = (events) =>
+//   events.sort((a, b) => new Date(b.start_date) - new Date(a.start_date));
 
-const sortEventsAsc = (events) =>
-  events.sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
+// const sortEventsAsc = (events) =>
+//   events.sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
 
-module.exports = getAllEventsController;
+// module.exports = getAllEventsController;
