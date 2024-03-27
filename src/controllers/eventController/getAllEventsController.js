@@ -24,22 +24,26 @@ const getAllEventsController = async (criterion, filter, order, from, to) => {
 
     if (filter) {
       const filteredByCategory = events.filter((event) =>
-        event.category.includes(filter)
+        event.category.toLowerCase().includes(filter.toLowerCase())
       );
       const filteredByDescription = events.filter((event) =>
-        event.description.includes(filter)
+        event.description.toLowerCase().includes(filter.toLowerCase())
       );
       const filteredByLocation = events.filter((event) =>
-        event.location.includes(filter)
+        event.location.toLowerCase().includes(filter.toLowerCase())
       );
       const filteredByName = events.filter((event) =>
-        event.name.includes(filter)
+        event.name.toLowerCase().includes(filter.toLowerCase())
+      );
+      const filteredByCity = events.filter((event) =>
+        event.city.toLowerCase().includes(filter.toLowerCase())
       );
       const allFiltered = [
         ...filteredByCategory,
         ...filteredByDescription,
         ...filteredByLocation,
         ...filteredByName,
+        ...filteredByCity,
       ];
       const uniqueObjects = removeDuplicates(allFiltered);
       return sortAndPaginate(uniqueObjects, order, from, to);

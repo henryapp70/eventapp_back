@@ -20,6 +20,7 @@ const getAllEventsHandler = async (req, res) => {
 
 module.exports = getAllEventsHandler;
 
+//
 // const { Event } = require("../../db");
 // const removeDuplicates = require("../../utils/removeDuplicates");
 
@@ -39,7 +40,7 @@ module.exports = getAllEventsHandler;
 //       return res.status(200).json(events);
 //     }
 
-//     if (criterion && filter ) {
+//     if (criterion && filter) {
 //       const filteredEvents = events.filter(
 //         (event) => event[criterion] === filter
 //       );
@@ -52,7 +53,7 @@ module.exports = getAllEventsHandler;
 //           return res.status(200).json(sortedEvents.slice(from - 1, to));
 //         }
 //         return res.status(200).json(sortedEvents);
-//       } else if(order==="ASC") {
+//       } else if (order === "ASC") {
 //         const sortedEvents = filteredEvents.sort(
 //           (a, b) => new Date(a.start_date) - new Date(b.start_date)
 //         );
@@ -69,22 +70,26 @@ module.exports = getAllEventsHandler;
 
 //     if (filter) {
 //       const filteredByCategory = events.filter((event) =>
-//         event["category"].includes(filter)
+//         event["category"].toLowerCase().includes(filter.toLowerCase())
 //       );
 //       const filteredByDescription = events.filter((event) =>
-//         event["description"].includes(filter)
+//         event["description"].toLowerCase().includes(filter.toLowerCase())
 //       );
 //       const filteredByLocation = events.filter((event) =>
-//         event["location"].includes(filter)
+//         event["location"].toLowerCase().includes(filter.toLowerCase())
 //       );
 //       const filteredByName = events.filter((event) =>
-//         event["name"].includes(filter)
+//         event["name"].toLowerCase().includes(filter.toLowerCase())
+//       );
+//       const filteredBycity = events.filter((event) =>
+//         event["city"].toLowerCase().includes(filter.toLowerCase())
 //       );
 //       const allFiltered = [
 //         ...filteredByCategory,
 //         ...filteredByDescription,
 //         ...filteredByLocation,
 //         ...filteredByName,
+//         ...filteredBycity,
 //       ];
 
 //       const uniqueObjects = removeDuplicates(allFiltered);

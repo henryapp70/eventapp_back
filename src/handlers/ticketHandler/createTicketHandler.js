@@ -10,7 +10,8 @@ const createTicketHandler = async (req, res) => {
     if (!event) {
       return res.status(404).json({ message: "Event not found" });
     }
-
+    // this needs to be improved. You can create a ticket only
+    // if the event is paid. I need to implement that
     const ticket = await Ticket.create({
       ticket_type,
       price,

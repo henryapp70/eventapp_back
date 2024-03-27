@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const router = Router();
+
 //const registerHandler = require("../handlers/userHandler/registerHandler");
 //const loginHandler = require("../handlers/userHandler/loginHandler");
 const logoutHandler = require("../handlers/userHandler/logoutHandler");
