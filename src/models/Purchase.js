@@ -19,7 +19,8 @@ module.exports = (sequelize) => {
       purchase_date: {
         //fecha_compra
         type: DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
+        defaultValue: DataTypes.NOW,
       },
     },
     { timestamps: false }

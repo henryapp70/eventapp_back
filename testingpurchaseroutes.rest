@@ -1,0 +1,8 @@
+### register purchase
+### http://localhost:3001/api/v1/purchase/:idUser/:idTicket
+POST http://localhost:3001/api/v1/purchase/2/1
+Content-Type: application/json
+
+{
+  "quantity": 5
+}
