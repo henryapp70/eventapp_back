@@ -1,6 +1,7 @@
 const { Event, Sponsor, User } = require("../../db");
 
-const registerEventController = async (userId, eventData) => {
+const registerEventController = async (userId, eventData, imageURL) => {
+  console.log(imageURL)
   try {
     const user = await User.findByPk(userId);
     if (!user) {
@@ -13,6 +14,7 @@ const registerEventController = async (userId, eventData) => {
 
     const event = await Event.create({
       ...eventData,
+      image:[imageURL],
       id_user: userId,
     });
 

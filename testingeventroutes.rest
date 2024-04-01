@@ -24,7 +24,7 @@ Content-Type: application/json
   "start_hour": "10:00:00",
   "end_hour": "20:00:00",
   "location": "Downtown Square",
-  "event_type": "Holiday Market",
+  "category": "Holiday Market",
   "access": "paid",
   "image": [
     "https://images.pexels.com/photos/5331815/pexels-photo-5331815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

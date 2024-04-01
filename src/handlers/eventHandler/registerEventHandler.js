@@ -1,10 +1,23 @@
 const registerEventController = require("../../controllers/eventController/registerEventController");
+const { cloudinary } = require("../../utils/cloudinary");
 
 const registerEventHandler = async (req, res) => {
   const { id } = req.params;
   const eventData = req.body;
+  let imageURL = "";
+  if (!req.file) {
+    const imageBuffer = req.file.buffer.toString("base64");
+    const result = await cloudinary.uploader.upload(
+      `data:image/jpeg;base64,${imageBuffer}`
+    );
+    imageURL = result.url;
+  }
 
-  const { success, event, msg } = await registerEventController(id, eventData);
+  const { success, event, msg } = await registerEventController(
+    id,
+    eventData,
+    imageURL
+  );
 
   if (success) {
     res.status(200).json({ event, msg });
@@ -15,10 +28,7 @@ const registerEventHandler = async (req, res) => {
 
 module.exports = registerEventHandler;
 
-
-
-
-
+//
 // const { Event, Sponsor, User } = require("../../db");
 
 // const registerEventHandler = async (req, res) => {
@@ -32,10 +42,10 @@ module.exports = registerEventHandler;
 //     end_hour,
 //     event_type,
 //     location,
-//     image,
 //     access,
 //     sponsors,
 //   } = req.body;
+
 //   try {
 //     const user = await User.findByPk(id);
 //     if (!user) {
@@ -44,6 +54,15 @@ module.exports = registerEventHandler;
 //     if (user.type_user !== "admin") {
 //       return res.status(400).json({ msg: "you cannot register an event" });
 //     }
+//     let imageURL = "";
+//     if (!req.file) {
+//       const imageBuffer = req.file.buffer.toString("base64");
+//       const result = await cloudinary.uploader.upload(
+//         `data:image/jpeg;base64,${imageBuffer}`
+//       );
+//       imageURL = result.url;
+//     }
+
 //     const event = await Event.create({
 //       name,
 //       description,
@@ -53,7 +72,7 @@ module.exports = registerEventHandler;
 //       end_hour,
 //       event_type,
 //       location,
-//       image,
+//       image: [imageURL],
 //       access,
 //       id_user: id,
 //     });
