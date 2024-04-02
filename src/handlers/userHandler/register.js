@@ -1,6 +1,6 @@
 const { User } = require("../../db.js");
 
-const newUserHandler = async (req, res) => {
+const register = async (req, res) => {
     try{
     const { name, email, password, interests} = req.body;
     if(name && email && password, interests){
@@ -15,4 +15,4 @@ const newUserHandler = async (req, res) => {
     }
 }
 
-module.exports = newUserHandler;
+module.exports = register;
