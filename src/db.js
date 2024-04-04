@@ -8,7 +8,7 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, DATABASE_URL } =
 
 const sequelize = new Sequelize(
 // `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,  // descomentar para probar localmente
-DATABASE_URL,
+DATABASE_URL,  // comentar para probar localmente
   {
     dialect: "postgres",
     logging: false,
