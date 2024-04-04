@@ -9,6 +9,9 @@ const getOneUserHandler = async (req, res) => {
       email: oneUserDB.email,
       password: oneUserDB.password,
       interests: oneUserDB.interests,
+      type_user: oneUserDB.type_user,
+      status: oneUserDB.status,
+      image: oneUserDB.image
     };
     return res.status(200).json(oneUser);
   } catch (error) {

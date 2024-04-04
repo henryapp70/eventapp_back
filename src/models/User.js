@@ -29,8 +29,13 @@ module.exports = (sequelize) => {
       },
       type_user: {
         type: DataTypes.STRING,
-        defaultValue: "registered",
+        defaultValue: "user",
         allowNull: false,
+      },
+      status:{
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
+        allowNull: false
       },
       image: {
         type: DataTypes.ARRAY(DataTypes.STRING),
