@@ -2,10 +2,10 @@ const { User } = require("../../db.js");
 
 const register = async (req, res) => {
     try{
-    const { name, email, password, interests} = req.body;
-    if(name && email && password, interests){
+    const { name, email, password, interests, image} = req.body;
+    if(name && email && password, interests, image){
         const newUser = await User.findOrCreate({
-            where: { name, email, password, interests }
+            where: { name, email, password, interests, image }
         })
         return res.json(newUser)
     }
