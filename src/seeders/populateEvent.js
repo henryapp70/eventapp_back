@@ -64,7 +64,7 @@ async function populateEvent() {
         end_hour: "22:00:00",
         location: "City Park Amphitheater",
         category: "Festival",
-        access: "free",
+        access: "paid",
         id_user: 2,
         image: [
           "https://images.unsplash.com/photo-1525994886773-080587e161c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amF6eiUyMHN1bW1lcnxlbnwwfHwwfHx8MA%3D%3D",
@@ -80,7 +80,7 @@ async function populateEvent() {
         end_hour: "18:00:00",
         location: "Tech Center",
         category: "Summit",
-        access: "paid",
+        access: "free",
         id_user: 3,
         image: [
           "https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_640.jpg",
