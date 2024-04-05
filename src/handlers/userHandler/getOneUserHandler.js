@@ -8,7 +8,6 @@ const getOneUserHandler = async (req, res) => {
       name: oneUserDB.name,
       email: oneUserDB.email,
       password: oneUserDB.password,
-      interests: oneUserDB.interests,
       type_user: oneUserDB.type_user,
       status: oneUserDB.status,
       image: oneUserDB.image
