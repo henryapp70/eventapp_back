@@ -14,7 +14,14 @@ const login = async (req,res) =>{
             if(actualUser.password === password){
                 return res.json({
                     access:true,
-                    actualUser: actualUser.id 
+                    id_user:actualUser.id_user,
+                    name:actualUser.name,
+                    email:actualUser.email,
+                    password:actualUser.password,
+                    type_user:actualUser.type_user,
+                    status:actualUser.status,
+                    image:actualUser.image,
+                    id_user:actualUser.id
                 })
             }
             return res.status(403).send("Incorrect password")
