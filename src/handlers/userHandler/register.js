@@ -1,4 +1,5 @@
 const { User } = require("../../db.js");
+const sendEmail = require("./email.js");
 
 const register = async (req, res) => {
     try{
