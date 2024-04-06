@@ -10,7 +10,8 @@ const sendEmail = async (email) => {
   
   const { data, error } = await resend.emails.send({
     from: 'EventApp <onboarding@resend.dev>',
-    to: [email],
+    to: ['ezequielheick@hotmail.com'],
+    //to: [email], comentado por falta de dominio, solo se envia mail a la cuenta con la que fue creada resend
     subject: 'Welcome to EventApp',
     html: '<strong>you have registered a new user successfuly!.</strong>',
   });
