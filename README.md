@@ -5,6 +5,7 @@ endpoints:
         http://localhost:3001/api/v1/register  
         http://localhost:3001/api/v1/login  
 
+
     Events:
         http://localhost:3001/api/v1/getallevents
         http://localhost:3001/api/v1/getallevents?search=&city=&category=&access=&order=
