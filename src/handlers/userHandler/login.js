@@ -14,7 +14,7 @@ const login = async (req,res) =>{
             if(actualUser.password === password){
                 return res.json({
                     access:true,
-                    id_user:actualUser.id_user,
+                    user_id:actualUser.id_user,
                     name:actualUser.name,
                     email:actualUser.email,
                     password:actualUser.password,
