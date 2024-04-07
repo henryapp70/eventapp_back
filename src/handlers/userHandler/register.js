@@ -1,4 +1,28 @@
+require("dotenv").config()
 const { User } = require("../../db.js");
+const {Resend} = require("resend")
+
+const { RESEND_API_KEY } = process.env
+const resend = new Resend(RESEND_API_KEY);
+
+const sendEmail = async (email) => {
+
+  
+  const { data, error } = await resend.emails.send({
+    from: 'EventApp <onboarding@resend.dev>',
+    to: ['ezequielheick@hotmail.com'],
+    //to: [email], comentado por falta de dominio, solo se envia mail a la cuenta con la que fue creada resend
+    subject: 'Welcome to EventApp',
+    html: '<strong>you have registered a new user successfuly!.</strong>',
+  });
+
+  if (error) {
+    return console.error({ error });
+  }
+
+  console.log({ data });
+};
+
 
 const register = async (req, res) => {
     try{
@@ -7,6 +31,7 @@ const register = async (req, res) => {
         const newUser = await User.findOrCreate({
             where: { name, email, password, image }
         })
+        sendEmail(email)
         return res.json(newUser)
     }
     return res.status(400).send("Datos incorrectos")
