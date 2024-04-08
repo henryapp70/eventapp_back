@@ -61,10 +61,11 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      status: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: true
-      }
+      ticket_price: {
+        type: DataTypes.DECIMAL(10, 2), // Define el tipo de dato como decimal para almacenar el precio
+        allowNull: false,
+        defaultValue: 0, // Puedes establecer un valor predeterminado si lo deseas
+      },
     },
     { timestamps: false }
   );
