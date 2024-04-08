@@ -13,3 +13,15 @@ endpoints:
         http://localhost:3001/api/v1/registerevent/:id
         http://localhost:3001/api/v1/updateevent/:idUser/:idEvent
         http://localhost:3001/api/v1/deleteevent/:idUser/:idEvent
+
+        update event status
+        http://localhost:3001/api/v1/updateevent/:idUser/:idEvent/:status
+
+    Sponsors:
+        http://localhost:3001/api/v1/sponsor
+        http://localhost:3001/api/v1/sponsor
+        http://localhost:3001/api/v1/sponsor/:id
+        http://localhost:3001/api/v1/sponsor/:id
+
+        update sponsor status
+        http://localhost:3001/api/v1/sponsor/:id/:status
