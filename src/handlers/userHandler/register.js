@@ -3,6 +3,7 @@ const { User } = require("../../db.js");
 const nodemailer = require("nodemailer");
 const fs = require("fs");
 const handlebars = require("handlebars")
+const {GOOGLE_KEY} = process.env;
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
@@ -10,7 +11,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: "eventapphenry@gmail.com",
-    pass: "eefc knra iijn qksc",
+    pass: GOOGLE_KEY,
   },
 });
 
