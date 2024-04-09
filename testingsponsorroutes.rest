@@ -1,0 +1,4 @@
+### updsting sponsor status
+### http://localhost:3001/api/v1/:id/:status
+
+PUT  http://localhost:3001/api/v1/sponsor/1/false
