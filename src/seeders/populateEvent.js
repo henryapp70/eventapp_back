@@ -262,8 +262,7 @@ async function populateEvent() {
         access: "paid",
         id_user: 3,
         image: [
-          "https://assets-global.website-files.com/5e02516b8d3c51961ce38202/64e790d8fe0b5d0d5194da23_082523.1.jpg",
-          "https://images.pexels.com/photos/19193068/pexels-photo-19193068/free-photo-of-ligero-ciudad-restaurante-noche.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://res.cloudinary.com/dcvxjhqk8/image/upload/v1712703829/event_images/fwhb2zr23nlida3kpz3q.png",
         ],
         city: "San Francisco",
         ticket_price: 30.0,
