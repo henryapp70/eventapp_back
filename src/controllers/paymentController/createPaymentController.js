@@ -17,8 +17,8 @@ const createSession = async (req, res) => {
         quantity: 1,
       }],
       mode: 'payment',
-      success_url: 'http://localhost:5000/api/v1/payment/success',
-      cancel_url: 'http://localhost:5000/api/v1/payment/cancel',
+      success_url: 'http://localhost:5173/#/succes',
+      cancel_url: 'http://localhost:5173/api/v1/payment/#/purchase',
     });
         
     // Devolver el ID de la sesión de pago creada
