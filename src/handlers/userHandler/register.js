@@ -1,27 +1,43 @@
 require("dotenv").config()
 const { User } = require("../../db.js");
-const {Resend} = require("resend")
+const nodemailer = require("nodemailer");
+const fs = require("fs");
+const handlebars = require("handlebars")
+const {GOOGLE_KEY} = process.env;
 
-const { RESEND_API_KEY } = process.env
-const resend = new Resend(RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
+  auth: {
+    user: "eventapphenry@gmail.com",
+    pass: GOOGLE_KEY,
+  },
+});
 
-const sendEmail = async (email) => {
 
+async function sendEmail(email, name) {
+  const source = fs.readFileSync('src/handlers/userHandler/emailTemplate.html', 'utf-8').toString();
+  const template = handlebars.compile(source);
+  const replacements = {
+    username: name,
+  };
+  const htmlToSend = template(replacements);
   
-  const { data, error } = await resend.emails.send({
-    from: 'EventApp <onboarding@resend.dev>',
-    to: ['ezequielheick@hotmail.com'],
-    //to: [email], comentado por falta de dominio, solo se envia mail a la cuenta con la que fue creada resend
-    subject: 'Welcome to EventApp',
-    html: '<strong>you have registered a new user successfuly!.</strong>',
+  const info = await transporter.sendMail({
+    from: '"eventApp" <eventapp@gmail.com>',
+    to: email,
+    subject: `Hello ${name}`, 
+    text: "Welcome to eventApp",
+    html: htmlToSend
   });
 
-  if (error) {
-    return console.error({ error });
-  }
+  console.log("Message sent: %s", info.messageId);
+  
+}
 
-  console.log({ data });
-};
+
+
 
 
 const register = async (req, res) => {
@@ -31,7 +47,7 @@ const register = async (req, res) => {
         const newUser = await User.findOrCreate({
             where: { name, email, password, image }
         })
-        sendEmail(email)
+        sendEmail(email, name)
         return res.json(newUser)
     }
     return res.status(400).send("Datos incorrectos")
