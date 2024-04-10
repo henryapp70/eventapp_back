@@ -1,9 +1,9 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-
+const { Purchase } = require('../../db')
 const createSession = async (req, res) => {
   try {
     const { eventName, eventPrice } = req.body; // Obtener el nombre y el precio del evento desde el cuerpo de la solicitud
-
+    // Recibiría id_ticket, id_user, quantity_tickests
     // Crear la sesión de pago en Stripe con los datos del evento
     const session = await stripe.checkout.sessions.create({
       line_items: [{
@@ -20,7 +20,7 @@ const createSession = async (req, res) => {
       success_url: 'http://localhost:5000/api/v1/payment/success',
       cancel_url: 'http://localhost:5000/api/v1/payment/cancel',
     });
-
+        
     // Devolver el ID de la sesión de pago creada
     return session;
   } catch (error) {
