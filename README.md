@@ -25,3 +25,10 @@ endpoints:
 
         update sponsor status
         http://localhost:3001/api/v1/sponsor/:id/:status
+
+
+    Payment:
+        http://localhost:3001/api/v1/payment/create-checkout-session            //(POST)
+        http://localhost:3001/api/v1/payment/success                            //(GET)
+        http://localhost:3001/api/v1/payment/cancel                             //(GET)
+        
