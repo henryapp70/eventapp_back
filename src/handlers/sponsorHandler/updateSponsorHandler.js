@@ -1,4 +1,4 @@
-const updateSponsorController = require('../../controllers/sponsorController/updateSponsorController');
+const updateSponsorController = require("../../controllers/sponsorController/updateSponsorController");
 
 const updateSponsorHandler = async (req, res) => {
   try {

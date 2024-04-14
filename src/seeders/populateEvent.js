@@ -19,6 +19,7 @@ async function populateEvent() {
           "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ],
         city: "New York",
+        ticket_price: 45.5,
       },
       {
         name: "Art Exhibition",
@@ -36,6 +37,7 @@ async function populateEvent() {
           "https://images.unsplash.com/photo-1634115198971-a8163e755915?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGFydCUyMGV4aGliaXRpb258ZW58MHx8MHx8fDA%3D",
         ],
         city: "Los Angeles",
+        ticket_price: 0.0,
       },
       {
         name: "Music Festival",
@@ -53,6 +55,7 @@ async function populateEvent() {
           "https://images.unsplash.com/photo-1582711012124-a56cf82307a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bXVzaWMlMjBmZXN0aXZhbHxlbnwwfHwwfHx8MA%3D%3D",
         ],
         city: "Paris",
+        ticket_price: 52.0,
       },
       {
         name: "Summer Jazz Fest",
@@ -64,12 +67,13 @@ async function populateEvent() {
         end_hour: "22:00:00",
         location: "City Park Amphitheater",
         category: "Festival",
-        access: "free",
+        access: "paid",
         id_user: 2,
         image: [
           "https://images.unsplash.com/photo-1525994886773-080587e161c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amF6eiUyMHN1bW1lcnxlbnwwfHwwfHx8MA%3D%3D",
         ],
         city: "London",
+        ticket_price: 0.0,
       },
       {
         name: "Technology Summit 2024",
@@ -80,12 +84,13 @@ async function populateEvent() {
         end_hour: "18:00:00",
         location: "Tech Center",
         category: "Summit",
-        access: "paid",
+        access: "free",
         id_user: 3,
         image: [
           "https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_640.jpg",
         ],
         city: "San Francisco",
+        ticket_price: 20.0,
       },
       {
         name: "Artisan Market",
@@ -102,6 +107,7 @@ async function populateEvent() {
           "https://plus.unsplash.com/premium_photo-1682091891377-e95e88c08d8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjA1fHxhcnRpc2FuJTIwbWFya2V0fGVufDB8fDB8fHww",
         ],
         city: "Seattle",
+        ticket_price: 0.0,
       },
       {
         name: "Fashion Show",
@@ -119,6 +125,7 @@ async function populateEvent() {
           "https://images.unsplash.com/photo-1543728069-a3f97c5a2f32?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ],
         city: "New York",
+        ticket_price: 30.0,
       },
       {
         name: "Art Workshop",
@@ -136,6 +143,7 @@ async function populateEvent() {
           "https://images.unsplash.com/photo-1560831340-b9679dc9e9f0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         ],
         city: "Chicago",
+        ticket_price: 0.0,
       },
       {
         name: "Food Truck Festival",
@@ -153,6 +161,7 @@ async function populateEvent() {
           "https://plus.unsplash.com/premium_photo-1683121624323-0c5bf3ca6af2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZvb2QlMjB0cnVjayUyMGZlc3RpdmFsfGVufDB8fDB8fHww",
         ],
         city: "Austin",
+        ticket_price: 0.0,
       },
       {
         name: "Science Fair",
@@ -170,6 +179,7 @@ async function populateEvent() {
           "https://images.unsplash.com/photo-1518152006812-edab29b069ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmVyaWElMjBkZSUyMGNpZW5jaWElMjBhbCUyMGFpcmUlMjBsaWJyZXxlbnwwfHwwfHx8MA%3D%3D",
         ],
         city: "Seattle",
+        ticket_price: 0.0,
       },
       {
         name: "Rock Concert 2024",
@@ -187,6 +197,7 @@ async function populateEvent() {
           "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29uY2VydHxlbnwwfDB8MHx8fDA%3D",
         ],
         city: "Los Angeles",
+        ticket_price: 60.0,
       },
       {
         name: "Basketball Championship",
@@ -203,6 +214,7 @@ async function populateEvent() {
           "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFza2V0YmFsbHxlbnwwfDB8MHx8fDA%3D",
         ],
         city: "Chicago",
+        ticket_price: 35.0,
       },
       {
         name: "Rock Concert Extravaganza",
@@ -216,9 +228,10 @@ async function populateEvent() {
         access: "paid",
         id_user: 2,
         image: [
-          "https://images.unsplash.com/photo-1527149680983-77224f79e457?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjQxfDB8MHxzZWFyY2h8fDB8fDB8&auto=format&fit=crop&w=500&q=60",
+          "https://upload.wikimedia.org/wikipedia/commons/4/4f/Girl_talk_x09.jpg",
         ],
         city: "Los Angeles",
+        ticket_price: 20.0,
       },
       {
         name: "Art Exhibition: Modern Masters",
@@ -232,9 +245,10 @@ async function populateEvent() {
         access: "free",
         id_user: 1,
         image: [
-          "https://images.unsplash.com/photo-1508218652476-71a79b4f8b89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYxfDB8MHxzZWFyY2h8fDB8fDB8&auto=format&fit=crop&w=500&q=60",
+          "https://dailytimes.com.pk/assets/uploads/2021/10/inp-13-13.jpg",
         ],
         city: "New York",
+        ticket_price: 0.0,
       },
       {
         name: "Comedy Night: Laugh Out Loud!",
@@ -248,12 +262,13 @@ async function populateEvent() {
         access: "paid",
         id_user: 3,
         image: [
-          "https://images.unsplash.com/photo-1619646093727-7e8df30eefa5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY4fDB8MHxzZWFyY2h8fDB8fDB8&auto=format&fit=crop&w=500&q=60",
+          "https://assets-global.website-files.com/5e02516b8d3c51961ce38202/64e790d8fe0b5d0d5194da23_082523.1.jpg",
         ],
         city: "San Francisco",
+        ticket_price: 30.0,
       },
       {
-        name: "Food Festival: A Culinary Journey",
+        name: "Food Festival: A Culinary Journey 'Peruvian Food Fest' ",
         description: "Experience diverse flavors from all over the world!",
         start_date: "2024-10-26",
         end_date: "2024-10-27",
@@ -264,9 +279,10 @@ async function populateEvent() {
         access: "paid",
         id_user: 5,
         image: [
-          "https://plus.unsplash.com/premium_photo-1711390047540-a76d80a9620e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://www.salkantaytrekking.com/blog/wp-content/uploads/2022/12/18-Delicious-Authentic-Foods-to-Try-in-Peru-960x540.jpg",
         ],
         city: "Paris",
+        ticket_price: 10.0,
       },
 
       {
@@ -281,10 +297,11 @@ async function populateEvent() {
         category: "Music Festival",
         access: "paid",
         image: [
-          "https://plus.unsplash.com/premium_photo-1711390047540-a76d80a9620e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://edmidentity.com/wp-content/uploads/2024/02/JoeCreate22Infra-07497.jpg",
         ],
         city: "New York",
         id_user: 2,
+        ticket_price: 15.0,
       },
       {
         name: "Tech Conference 2024: Innovate Tomorrow",
@@ -298,10 +315,11 @@ async function populateEvent() {
         category: "Conference",
         access: "paid",
         image: [
-          "https://plus.unsplash.com/premium_photo-1711390047540-a76d80a9620e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://miro.medium.com/v2/resize:fit:1080/1*S9oubxQudLh5jEhe0MMmPw.jpeg",
         ],
         city: "San Francisco",
         id_user: 3,
+        ticket_price: 12.0,
       },
       {
         name: "Art Exhibition: Colors of the World",
@@ -319,6 +337,7 @@ async function populateEvent() {
         ],
         city: "London",
         id_user: 4,
+        ticket_price: 0.0,
       },
       {
         name: "Sports Tournament: Unity Cup",
@@ -335,6 +354,7 @@ async function populateEvent() {
         ],
         city: "Los Angeles",
         id_user: 5,
+        ticket_price: 25.0,
       },
       {
         name: "First Food Festival: A Culinary Journey",
@@ -351,6 +371,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 2,
+        ticket_price: 35.0,
       },
       {
         name: "Second Food Festival: A Culinary Journey",
@@ -367,6 +388,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 1,
+        ticket_price: 10.0,
       },
       {
         name: "Third Food Festival: A Culinary Journey",
@@ -383,6 +405,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 2,
+        ticket_price: 10.0,
       },
       {
         name: "Fourth Food Festival: A Culinary Journey",
@@ -399,6 +422,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 1,
+        ticket_price: 15.0,
       },
       {
         name: "Fifth Food Festival: A Culinary Journey",
@@ -415,6 +439,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 2,
+        ticket_price: 15.0,
       },
       {
         name: "Sixth Food Festival: A Culinary Journey",
@@ -431,6 +456,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 1,
+        ticket_price: 15.0,
       },
       {
         name: "Seven Food Festival: A Culinary Journey",
@@ -447,6 +473,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 2,
+        ticket_price: 15.0,
       },
       {
         name: "Casual Food Festival: A Culinary Journey",
@@ -463,6 +490,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 1,
+        ticket_price: 10.0,
       },
       {
         name: "Monthly Food Festival: A Culinary Journey",
@@ -479,6 +507,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 2,
+        ticket_price: 12.0,
       },
       {
         name: "Weekly Food Festival: A Culinary Journey",
@@ -495,6 +524,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 1,
+        ticket_price: 8.0,
       },
       {
         name: "Parisian Fest",
@@ -511,6 +541,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         id_user: 2,
+        ticket_price: 11.0,
       },
     ]);
     console.log("Event table populated successfully");

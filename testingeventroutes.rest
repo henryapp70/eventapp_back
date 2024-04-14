@@ -3,13 +3,14 @@
 ### get all events
 GET http://localhost:3001/api/v1/getallevents
 
-### get events criterion, filter, order
-### http://localhost:3001/api/v1/getallevents?criterion=&filter=&order=&from=&to=
-GET http://localhost:3001/api/v1/getallevents?criterion=city&filter=Paris&order=DESC&from=&to=3
+### get events ( search, city category, access, order )
+### http://localhost:3001/api/v1/getallevents?search=&city=&category=&access=&order=
+
+GET http://localhost:3001/api/v1/getallevents?search=Paris&city=&category=&access=&order=
 
 ### get one event
 ### http://localhost:3001/api/v1/getallevents/:id --> where id is id_event
-GET http://localhost:3001/api/v1/getallevents/2
+GET http://localhost:3001/api/v1/getallevents/3
 
 ### register an event
 ### http://localhost:3001/api/v1/registerevent/:id --> where id is id_user
@@ -56,3 +57,7 @@ Content-Type: application/json
 ### delete one event
 ### http://localhost:3001/api/v1/deleteevent/:idUser/:idEvent
 DELETE http://localhost:3001/api/v1/deleteevent/2/3
+
+### update status event
+### http://localhost:3001/api/v1/updateevent/:idUser/:idEvent/:status
+PUT http://localhost:3001/api/v1/updateevent/2/1/false

@@ -2,8 +2,10 @@ const { Event } = require("../../db");
 const removeDuplicates = require("../../utils/removeDuplicates");
 
 const getAllEventsController = async (criterion, filter, order, from, to) => {
+  // search, city category, access, order
   let events;
-
+  // filter = search
+  //  
   try {
     events = await Event.findAll();
 
