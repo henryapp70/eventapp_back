@@ -6,7 +6,7 @@ const createSession = async (req, res) => {
     const { id_ticket, id_user, quantity } = req.body;
     // Crear la sesión de pago en Stripe con los datos del evento
     const ticket = await Ticket.findOne({ where: { id_ticket } });
-    const event = await Event.findOne({ where: { id_ticket } });
+    const event = await Event.findOne({ where: { id_event: ticket.id_event } });
 
     const session = await stripe.checkout.sessions.create({
       line_items: [
