@@ -5,7 +5,7 @@ module.exports = (sequelize) => {
     "User",
     {
       id_user: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.BIGINT,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
@@ -28,10 +28,10 @@ module.exports = (sequelize) => {
         defaultValue: "user",
         allowNull: false,
       },
-      status:{
+      status: {
         type: DataTypes.BOOLEAN,
         defaultValue: true,
-        allowNull: false
+        allowNull: false,
       },
       image: {
         type: DataTypes.STRING,

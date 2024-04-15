@@ -49,6 +49,7 @@ const {
   Sponsor,
   Ticket,
   User,
+  Rating,
 } = sequelize.models;
 
 // Aca vendrian las relaciones
@@ -94,7 +95,16 @@ Sponsor.belongsToMany(Event, {
   through: Event_Sponsor,
   foreignKey: "id_sponsor",
 });
+//
+Event.belongsToMany(User, {
+  through: Rating,
+  foreignKey: "id_event",
+});
 
+User.belongsToMany(Event, {
+  through: Rating,
+  foreignKey: "id_user",
+});
 //
 User.hasMany(Sponsor, { foreignKey: "id_user" });
 Sponsor.belongsTo(User, { foreignKey: "id_user" });
