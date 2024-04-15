@@ -31,4 +31,15 @@ endpoints:
         http://localhost:3001/api/v1/payment/create-checkout-session            //(POST)
         http://localhost:3001/api/v1/payment/success                            //(GET)
         http://localhost:3001/api/v1/payment/cancel                             //(GET)
-        
+    
+
+    Reviews(Rating):
+    POST http://localhost:3001/api/v1/event/review
+    Content-Type: application/json
+
+        {
+        "id_event": 4,
+        "id_user": 2,
+        "comment": "some awesome comment!",
+        "value": 4
+        }
