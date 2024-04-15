@@ -43,3 +43,6 @@ endpoints:
         "comment": "some awesome comment!",
         "value": 4
         }
+
+    GET http://localhost:3001/api/v1/event/review/:idEvent
+    this returns all the reviews associated to that event
