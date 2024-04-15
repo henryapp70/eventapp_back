@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/v1/event/review
+Content-Type: application/json
+
+{
+  "id_event": 4,
+  "id_user": 2,
+  "comment": "some awesome comment!",
+  "value": 4
+}
