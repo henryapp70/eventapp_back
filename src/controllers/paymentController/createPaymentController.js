@@ -50,6 +50,9 @@ const transporter = nodemailer.createTransport({
     user: "eventapphenry@gmail.com",
     pass: GOOGLE_KEY,
   },
+  tls: {
+    rejectUnauthorized: false,
+  },
 });
 async function sendEmail(email = user.email, name = user.name, eName = event.name,
 eDate = event.start_date, quantity = purchaseDetails.quantity, price = ticket.price) {

@@ -4,6 +4,9 @@ endpoints:
         http://localhost:3001/api/v1/getoneuser/:id  
         http://localhost:3001/api/v1/register  
         http://localhost:3001/api/v1/login  
+        http://localhost:3001/api/v1/status/:id_user/:status
+        http://localhost:3001/api/v1/usertype/:id_user/:type_user
+
 
 
     Events:
