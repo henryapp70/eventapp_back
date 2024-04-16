@@ -13,6 +13,9 @@ const transporter = nodemailer.createTransport({
     user: "eventapphenry@gmail.com",
     pass: GOOGLE_KEY,
   },
+  tls: {
+    rejectUnauthorized: false,
+  },
 });
 
 
