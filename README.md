@@ -46,3 +46,6 @@ endpoints:
 
     GET http://localhost:3001/api/v1/event/review/:idEvent
     this returns all the reviews associated to that event
+
+    GET http://localhost:3001/api/v1/ticket/event/review/:idUser
+    this returns all the events that a user has purchased a ticket
