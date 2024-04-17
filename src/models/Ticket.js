@@ -31,7 +31,11 @@ module.exports = (sequelize) => {
         type: DataTypes.DATE,
         allowNull: true,
       },
+      price_cat: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
     },
     { timestamps: false }
   );
-}
+};
