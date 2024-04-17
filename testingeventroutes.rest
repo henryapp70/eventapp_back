@@ -61,3 +61,6 @@ DELETE http://localhost:3001/api/v1/deleteevent/2/3
 ### update status event
 ### http://localhost:3001/api/v1/updateevent/:idUser/:idEvent/:status
 PUT http://localhost:3001/api/v1/updateevent/2/1/false
+
+###
+GET http://localhost:3001/api/v1/getallevents/stripeprice
