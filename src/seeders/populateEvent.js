@@ -20,6 +20,7 @@ async function populateEvent() {
         ],
         city: "New York",
         ticket_price: 45.5,
+        price: '{price_1P6acSRtxcncuebvGcSkVrhg}',
       },
       {
         name: "Art Exhibition",
@@ -56,6 +57,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         ticket_price: 52.0,
+        price: '{price_1P6amHRtxcncuebvV2sNQjj5}',
       },
       {
         name: "Summer Jazz Fest",
