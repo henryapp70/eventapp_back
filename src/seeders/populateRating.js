@@ -22,7 +22,7 @@ async function populateRating() {
         value: 4,
       },
       {
-        id_event: 1,
+        id_event: 2,
         id_user: 3,
         comment: "It was so funny!",
         value: 4,
@@ -46,7 +46,7 @@ async function populateRating() {
         value: 4,
       },
       {
-        id_event: 3,
+        id_event: 4,
         id_user: 3,
         comment: "Needs some improvement.",
         value: 2,
