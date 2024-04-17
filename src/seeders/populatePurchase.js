@@ -39,6 +39,18 @@ async function populatePurchase() {
         id_user: 3,
         id_ticket: 4,
       },
+      {
+        quantity: 19,
+        purchase_date: "2025-09-14",
+        id_user: 5,
+        id_ticket: 4,
+      },
+      {
+        quantity: 12,
+        purchase_date: "2025-09-14",
+        id_user: 5,
+        id_ticket: 1,
+      },
     ]);
 
     console.log("Purchase table populated successfully");
