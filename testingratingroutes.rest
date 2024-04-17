@@ -13,3 +13,6 @@ GET http://localhost:3001/api/v1/event/review/3
 
 ### GET http://localhost:3001/api/v1/ticket/event/review/:idUser
 GET http://localhost:3001/api/v1/ticket/event/review/3
+
+### GET http://localhost:3001/api/v1/event/review/:idEvent/:idUser
+GET http://localhost:3001/api/v1/event/review/3/3
