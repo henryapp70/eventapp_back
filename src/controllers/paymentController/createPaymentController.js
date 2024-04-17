@@ -31,7 +31,7 @@ const createSession = async (req, res) => {
       ],
       mode: "payment",
       success_url: "http://localhost:5173/#/succes",
-      cancel_url: "http://localhost:5173/api/v1/payment/#/purchase",
+      cancel_url: "http://localhost:5173/api/v1/payment/#/cart",
     });
 
     const purchaseDetails = {
