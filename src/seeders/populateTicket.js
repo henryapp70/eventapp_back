@@ -10,6 +10,7 @@ async function populateTicket() {
         sell_by_date: "2024-07-14",
         id_event: 1,
         id_user: 1,
+        price_cat: "price_1P6hVKRtxcncuebvsZIKB46U",
       },
       {
         ticket_type: "VIP",
@@ -18,6 +19,7 @@ async function populateTicket() {
         sell_by_date: "2024-08-19",
         id_event: 2,
         id_user: 1,
+        price_cat: "price_1P6hWvRtxcncuebvJhA3z92t",
       },
       {
         ticket_type: "Student Discount",
@@ -26,6 +28,7 @@ async function populateTicket() {
         sell_by_date: "2024-09-09",
         id_event: 3,
         id_user: 2,
+        price_cat: "price_1P6hXnRtxcncuebvyDqcBf6g",
       },
       {
         ticket_type: "Early Bird",
@@ -34,6 +37,7 @@ async function populateTicket() {
         sell_by_date: "2025-07-19",
         id_event: 4,
         id_user: 2,
+        price_cat: "price_1P6hYcRtxcncuebvIJmX8Hk7",
       },
       {
         ticket_type: "Charity",
@@ -42,6 +46,7 @@ async function populateTicket() {
         sell_by_date: "2025-07-19",
         id_event: 4,
         id_user: 1,
+        price_cat: "price_1P6hZgRtxcncuebvoSh9XkSZ",
       },
     ]);
 
