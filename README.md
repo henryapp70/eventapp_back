@@ -4,6 +4,9 @@ endpoints:
         http://localhost:3001/api/v1/getoneuser/:id  
         http://localhost:3001/api/v1/register  
         http://localhost:3001/api/v1/login  
+        http://localhost:3001/api/v1/status/:id_user/:status
+        http://localhost:3001/api/v1/usertype/:id_user/:type_user
+
 
 
     Events:
@@ -31,4 +34,24 @@ endpoints:
         http://localhost:3001/api/v1/payment/create-checkout-session            //(POST)
         http://localhost:3001/api/v1/payment/success                            //(GET)
         http://localhost:3001/api/v1/payment/cancel                             //(GET)
-        
+    
+
+    Reviews(Rating):
+    POST http://localhost:3001/api/v1/event/review
+    Content-Type: application/json
+
+        {
+        "id_event": 4,
+        "id_user": 2,
+        "comment": "some awesome comment!",
+        "value": 4
+        }
+
+    GET http://localhost:3001/api/v1/event/review/:idEvent
+    this returns all the reviews associated to that event
+
+    GET http://localhost:3001/api/v1/ticket/event/review/:idUser
+    this returns all the events that a user has purchased a ticket
+
+    GET http://localhost:3001/api/v1/event/review/:idEvent/:idUser
+    this returns all the reviews associated to that event that belongs to that user

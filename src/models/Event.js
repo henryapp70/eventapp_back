@@ -66,6 +66,14 @@ module.exports = (sequelize) => {
         allowNull: false,
         defaultValue: 0, // Puedes establecer un valor predeterminado si lo deseas
       },
+      rating:{
+        type:DataTypes.FLOAT,
+        allowNull:true
+      },
+      status: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
+      }
     },
     { timestamps: false }
   );

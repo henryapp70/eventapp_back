@@ -13,11 +13,14 @@ const transporter = nodemailer.createTransport({
     user: "eventapphenry@gmail.com",
     pass: GOOGLE_KEY,
   },
+  tls: {
+    rejectUnauthorized: false,
+  },
 });
 
 
 async function sendEmail(email, name) {
-  const source = fs.readFileSync('src/handlers/userHandler/emailTemplate.html', 'utf-8').toString();
+  const source = fs.readFileSync('src/utils/registerEmailTemplate.html', 'utf-8').toString();
   const template = handlebars.compile(source);
   const replacements = {
     username: name,
@@ -35,10 +38,6 @@ async function sendEmail(email, name) {
   console.log("Message sent: %s", info.messageId);
   
 }
-
-
-
-
 
 const register = async (req, res) => {
     try{

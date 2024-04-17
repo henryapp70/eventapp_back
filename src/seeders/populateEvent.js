@@ -21,6 +21,7 @@ async function populateEvent() {
         city: "New York",
         ticket_price: 45.5,
         price: '{price_1P6acSRtxcncuebvGcSkVrhg}',
+        rating: 3,
       },
       {
         name: "Art Exhibition",
@@ -39,6 +40,7 @@ async function populateEvent() {
         ],
         city: "Los Angeles",
         ticket_price: 0.0,
+        rating: 2,
       },
       {
         name: "Music Festival",
@@ -58,6 +60,7 @@ async function populateEvent() {
         city: "Paris",
         ticket_price: 52.0,
         price: '{price_1P6amHRtxcncuebvV2sNQjj5}',
+        rating: 1,
       },
       {
         name: "Summer Jazz Fest",
@@ -76,6 +79,7 @@ async function populateEvent() {
         ],
         city: "London",
         ticket_price: 0.0,
+        rating: 4.25,
       },
       {
         name: "Technology Summit 2024",
@@ -93,6 +97,7 @@ async function populateEvent() {
         ],
         city: "San Francisco",
         ticket_price: 20.0,
+        rating: 1.8,
       },
       {
         name: "Artisan Market",
@@ -110,6 +115,7 @@ async function populateEvent() {
         ],
         city: "Seattle",
         ticket_price: 0.0,
+        rating: 5,
       },
       {
         name: "Fashion Show",
@@ -128,6 +134,7 @@ async function populateEvent() {
         ],
         city: "New York",
         ticket_price: 30.0,
+        rating: 4,
       },
       {
         name: "Art Workshop",
@@ -146,6 +153,7 @@ async function populateEvent() {
         ],
         city: "Chicago",
         ticket_price: 0.0,
+        rating: 2,
       },
       {
         name: "Food Truck Festival",
@@ -164,6 +172,7 @@ async function populateEvent() {
         ],
         city: "Austin",
         ticket_price: 0.0,
+        rating: 5,
       },
       {
         name: "Science Fair",
@@ -182,6 +191,7 @@ async function populateEvent() {
         ],
         city: "Seattle",
         ticket_price: 0.0,
+        rating: 1,
       },
       {
         name: "Rock Concert 2024",
@@ -200,6 +210,7 @@ async function populateEvent() {
         ],
         city: "Los Angeles",
         ticket_price: 60.0,
+        rating: 0,
       },
       {
         name: "Basketball Championship",
@@ -217,6 +228,7 @@ async function populateEvent() {
         ],
         city: "Chicago",
         ticket_price: 35.0,
+        rating: 1,
       },
       {
         name: "Rock Concert Extravaganza",
@@ -234,6 +246,7 @@ async function populateEvent() {
         ],
         city: "Los Angeles",
         ticket_price: 20.0,
+        rating: 3.4,
       },
       {
         name: "Art Exhibition: Modern Masters",
@@ -251,6 +264,7 @@ async function populateEvent() {
         ],
         city: "New York",
         ticket_price: 0.0,
+        rating: 0,
       },
       {
         name: "Comedy Night: Laugh Out Loud!",
@@ -268,6 +282,7 @@ async function populateEvent() {
         ],
         city: "San Francisco",
         ticket_price: 30.0,
+        rating: 2,
       },
       {
         name: "Food Festival: A Culinary Journey 'Peruvian Food Fest' ",
@@ -285,6 +300,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         ticket_price: 10.0,
+        rating: 1,
       },
 
       {
@@ -304,6 +320,7 @@ async function populateEvent() {
         city: "New York",
         id_user: 2,
         ticket_price: 15.0,
+        rating: 0,
       },
       {
         name: "Tech Conference 2024: Innovate Tomorrow",
@@ -322,6 +339,7 @@ async function populateEvent() {
         city: "San Francisco",
         id_user: 3,
         ticket_price: 12.0,
+        rating: 0,
       },
       {
         name: "Art Exhibition: Colors of the World",
@@ -340,6 +358,7 @@ async function populateEvent() {
         city: "London",
         id_user: 4,
         ticket_price: 0.0,
+        rating: 1,
       },
       {
         name: "Sports Tournament: Unity Cup",
@@ -357,6 +376,7 @@ async function populateEvent() {
         city: "Los Angeles",
         id_user: 5,
         ticket_price: 25.0,
+        rating: 3.7,
       },
       {
         name: "First Food Festival: A Culinary Journey",
@@ -374,6 +394,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 35.0,
+        rating: 2.9,
       },
       {
         name: "Second Food Festival: A Culinary Journey",
@@ -391,6 +412,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 1,
         ticket_price: 10.0,
+        rating: 4,
       },
       {
         name: "Third Food Festival: A Culinary Journey",
@@ -408,6 +430,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 10.0,
+        rating: 0,
       },
       {
         name: "Fourth Food Festival: A Culinary Journey",
@@ -425,6 +448,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 1,
         ticket_price: 15.0,
+        rating: 2,
       },
       {
         name: "Fifth Food Festival: A Culinary Journey",
@@ -442,6 +466,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 15.0,
+        rating: 0,
       },
       {
         name: "Sixth Food Festival: A Culinary Journey",
@@ -459,6 +484,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 1,
         ticket_price: 15.0,
+        rating: 1.8,
       },
       {
         name: "Seven Food Festival: A Culinary Journey",
@@ -476,6 +502,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 15.0,
+        rating: 3.7,
       },
       {
         name: "Casual Food Festival: A Culinary Journey",
@@ -493,6 +520,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 1,
         ticket_price: 10.0,
+        rating: 0,
       },
       {
         name: "Monthly Food Festival: A Culinary Journey",
@@ -510,6 +538,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 12.0,
+        rating: 4.3,
       },
       {
         name: "Weekly Food Festival: A Culinary Journey",
@@ -527,6 +556,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 1,
         ticket_price: 8.0,
+        rating: 2,
       },
       {
         name: "Parisian Fest",
@@ -544,6 +574,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 11.0,
+        rating: 1,
       },
     ]);
     console.log("Event table populated successfully");
