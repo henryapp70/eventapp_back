@@ -35,6 +35,11 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
+      id_user: {
+        //id_usuario
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
     },
     { timestamps: false }
   );
