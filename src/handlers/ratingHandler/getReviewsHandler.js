@@ -8,6 +8,12 @@ const getReviewsHandler = async (req, res) => {
       where: { id_event: idEvent },
     });
 
+    if (!ratings.length) {
+      return res
+        .status(404)
+        .json({ message: "No reviews associated to that event." });
+    }
+
     res.status(200).json(ratings);
   } catch (error) {
     console.error("Error fetching reviews:", error);

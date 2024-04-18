@@ -31,7 +31,7 @@ const createSession = async (req, res) => {
       ],
       mode: "payment",
       success_url: "http://localhost:5173/#/succes",
-      cancel_url: "http://localhost:5173/api/v1/payment/#/purchase",
+      cancel_url: "http://localhost:5173/api/v1/payment/#/cart",
     });
 
     const purchaseDetails = {
@@ -49,6 +49,9 @@ const transporter = nodemailer.createTransport({
   auth: {
     user: "eventapphenry@gmail.com",
     pass: GOOGLE_KEY,
+  },
+  tls: {
+    rejectUnauthorized: false,
   },
 });
 async function sendEmail(email = user.email, name = user.name, eName = event.name,

@@ -2,7 +2,7 @@ const { Ticket, Event } = require("../../db");
 
 const createTicketHandler = async (req, res) => {
   const { id } = req.params;
-  const { ticket_type, price, available_quantity, sell_by_date } = req.body;
+  const { ticket_type, price, available_quantity, sell_by_date, price_cat } = req.body;
 
   try {
     const event = await Event.findByPk(id);
@@ -17,6 +17,7 @@ const createTicketHandler = async (req, res) => {
       price,
       available_quantity,
       sell_by_date,
+      price_cat,
       id_event: event.id_event,
     });
 

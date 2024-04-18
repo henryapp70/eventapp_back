@@ -20,6 +20,7 @@ async function populateEvent() {
         ],
         city: "New York",
         ticket_price: 45.5,
+        price: '{price_1P6acSRtxcncuebvGcSkVrhg}',
         rating: 3,
       },
       {
@@ -58,6 +59,7 @@ async function populateEvent() {
         ],
         city: "Paris",
         ticket_price: 52.0,
+        price: '{price_1P6amHRtxcncuebvV2sNQjj5}',
         rating: 1,
       },
       {
@@ -76,7 +78,8 @@ async function populateEvent() {
           "https://images.unsplash.com/photo-1525994886773-080587e161c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8amF6eiUyMHN1bW1lcnxlbnwwfHwwfHx8MA%3D%3D",
         ],
         city: "London",
-        ticket_price: 0.0,
+        ticket_price: 17.0,
+        price: '{price_1P6bJ2Rtxcncuebv0Aq7a02o}',
         rating: 4.25,
       },
       {
@@ -88,13 +91,14 @@ async function populateEvent() {
         end_hour: "18:00:00",
         location: "Tech Center",
         category: "Summit",
-        access: "free",
+        access: "paid",
         id_user: 3,
         image: [
           "https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_640.jpg",
         ],
         city: "San Francisco",
         ticket_price: 20.0,
+        price: '{price_1P6bLcRtxcncuebvVfqHn7SG}',
         rating: 1.8,
       },
       {
@@ -132,6 +136,7 @@ async function populateEvent() {
         ],
         city: "New York",
         ticket_price: 30.0,
+        price: '{price_1P6bVpRtxcncuebv543uRqst}',
         rating: 4,
       },
       {
@@ -208,6 +213,7 @@ async function populateEvent() {
         ],
         city: "Los Angeles",
         ticket_price: 60.0,
+        price: '{price_1P6bacRtxcncuebvYFU1W6EF}',
         rating: 0,
       },
       {
@@ -226,6 +232,7 @@ async function populateEvent() {
         ],
         city: "Chicago",
         ticket_price: 35.0,
+        price: '{price_1P6bcpRtxcncuebvOzjICRt5}',
         rating: 1,
       },
       {
@@ -244,6 +251,7 @@ async function populateEvent() {
         ],
         city: "Los Angeles",
         ticket_price: 20.0,
+        price: '{price_1P6be0RtxcncuebvI6ELHnoU}',
         rating: 3.4,
       },
       {
@@ -280,11 +288,12 @@ async function populateEvent() {
         ],
         city: "San Francisco",
         ticket_price: 30.0,
+        price: '{price_1P6bj7RtxcncuebvclJKeIqn}',
         rating: 2,
       },
 
       {
-        name: "Food Festival: A Culinary Journey 'Peruvian Food Fest' ",
+        name: "Food Festival: A Culinary Journey 'Peruvian Food Fest'.",
         description: "Experience diverse flavors from all over the world!",
         start_date: "2024-10-26",
         end_date: "2024-10-27",
@@ -299,13 +308,13 @@ async function populateEvent() {
         ],
         city: "Paris",
         ticket_price: 10.0,
+        price: '{price_1P6blCRtxcncuebvu5QUy12o}',
         rating: 1,
       },
 
       {
         name: "Music Festival: Harmony in the Park",
-        description:
-          "An outdoor music festival celebrating harmony and diversity.",
+        description: "An outdoor music festival celebrating harmony and diversity.",
         start_date: "2024-08-15T00:00:00.000Z",
         end_date: "2024-08-17T00:00:00.000Z",
         start_hour: "15:00:00",
@@ -319,6 +328,7 @@ async function populateEvent() {
         city: "New York",
         id_user: 2,
         ticket_price: 15.0,
+        price: '{price_1P6bn6Rtxcncuebvs5APRmPF}',
         rating: 0,
       },
       {
@@ -340,8 +350,7 @@ async function populateEvent() {
       },
       {
         name: "Tech Conference 2024: Innovate Tomorrow",
-        description:
-          "An annual conference showcasing the latest innovations in technology.",
+        description: "An annual conference showcasing the latest innovations in technology.",
         start_date: "2024-09-20T00:00:00.000Z",
         end_date: "2024-09-22T00:00:00.000Z",
         start_hour: "09:00:00",
@@ -355,6 +364,7 @@ async function populateEvent() {
         city: "San Francisco",
         id_user: 3,
         ticket_price: 12.0,
+        price: '{price_1P6bpyRtxcncuebvlPiF5r6B}',
         rating: 0,
       },
       {
@@ -392,6 +402,7 @@ async function populateEvent() {
         city: "Los Angeles",
         id_user: 5,
         ticket_price: 25.0,
+        price: '{price_1P6bxIRtxcncuebvyidNb3Fs}',
         rating: 3.7,
       },
       {
@@ -410,6 +421,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 35.0,
+        price: '{price_1P6byvRtxcncuebvEtwoPly5}',
         rating: 2.9,
       },
       {
@@ -428,6 +440,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 1,
         ticket_price: 10.0,
+        price: '{price_1P6c0PRtxcncuebv9RxJBCA0}',
         rating: 4,
       },
       {
@@ -447,6 +460,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 10.0,
+        price: '{price_1P6c1lRtxcncuebvU221hryI}',
         rating: 0,
       },
       {
@@ -465,6 +479,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 1,
         ticket_price: 15.0,
+        price:'{price_1P6c7bRtxcncuebvpuqOWwyF}',
         rating: 2,
       },
       {
@@ -483,6 +498,7 @@ async function populateEvent() {
         city: "Rome",
         id_user: 2,
         ticket_price: 15.0,
+        price: '{price_1P6c9rRtxcncuebvLi1vxmFI}',
         rating: 0,
       },
       {
@@ -502,6 +518,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 1,
         ticket_price: 15.0,
+        price: '{price_1P6cBrRtxcncuebv2eeABtIC}',
         rating: 1.8,
       },
       {
@@ -521,6 +538,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 15.0,
+        price: '{price_1P6cD3RtxcncuebvrRv8RWDP}',
         rating: 3.7,
       },
       {
@@ -540,6 +558,7 @@ async function populateEvent() {
         city: "Puerto Rico",
         id_user: 1,
         ticket_price: 10.0,
+        price: '{price_1P6cEGRtxcncuebvJm8HwfcW}',
         rating: 0,
       },
       {
@@ -559,6 +578,7 @@ async function populateEvent() {
         city: "Paris",
         id_user: 2,
         ticket_price: 12.0,
+        price: '{price_1P6cFPRtxcncuebvZWGMsBBI}',
         rating: 4.3,
       },
       {
@@ -577,6 +597,7 @@ async function populateEvent() {
         city: "Puerto Rico",
         id_user: 1,
         ticket_price: 8.0,
+        price: '{price_1P6cGURtxcncuebvatH0Oqni}',
         rating: 2,
       },
 
