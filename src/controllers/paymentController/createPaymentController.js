@@ -20,7 +20,7 @@ const createSession = async (req, res) => {
       quantity,
       id_ticket,
     };
-    const purchase = await Purchase.create(purchaseDetails);
+    await Purchase.create(purchaseDetails);
     // agregar la notificacion por mail
 
     const transporter = nodemailer.createTransport({
