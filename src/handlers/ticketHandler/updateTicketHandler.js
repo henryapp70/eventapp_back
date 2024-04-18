@@ -1,7 +1,7 @@
 const updateTicketController = require("../../controllers/ticketController/updateTicketController");
 const updateTicketHandler = async (req, res) => {
   const { id } = req.params;
-  const { ticket_type, price, available_quantity, sell_by_date } = req.body;
+  const { ticket_type, price, available_quantity, sell_by_date, price_cat} = req.body;
 
   try {
     const ticket = await updateTicketController(id, {
@@ -9,6 +9,7 @@ const updateTicketHandler = async (req, res) => {
       price,
       available_quantity,
       sell_by_date,
+      price_cat
     });
 
     if (!ticket) {
