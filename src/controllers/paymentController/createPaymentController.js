@@ -20,7 +20,7 @@ const createSession = async (req, res) => {
       quantity,
       id_ticket,
     };
-
+    const purchase = await Purchase.create(purchaseDetails);
     // agregar la notificacion por mail
 
     const transporter = nodemailer.createTransport({
@@ -70,6 +70,7 @@ const createSession = async (req, res) => {
     sendEmail();
 
     // Devolver el ID de la sesión de pago creada
+    return session;
   } catch (error) {
     // Manejar errores
     console.error("Error creating payment session:", error);
