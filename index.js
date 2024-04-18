@@ -9,6 +9,7 @@ const populateFollowup = require("./src/seeders/populateFollowup.js");
 const populateEvent_Sponsor = require("./src/seeders/populateEvent_Sponsor.js");
 const populateTicket = require("./src/seeders/populateTicket.js");
 const populatePurchase = require("./src/seeders/populatePurchase.js");
+const populateRating = require("./src/seeders/populateRating.js");
 
 conn
   .sync({ force: true })
@@ -25,4 +26,5 @@ conn
   .then(() => populateParticipation())
   .then(() => populateFollowup())
   .then(() => populatePurchase())
+  .then(() => populateRating())
   .catch((error) => console.error(error));

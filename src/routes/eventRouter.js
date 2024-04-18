@@ -6,9 +6,11 @@ const getAllEventsHandler = require("../handlers/eventHandler/getAllEventsHandle
 const updateEventHandler = require("../handlers/eventHandler/updateEventHandler");
 const updateEventStatusHandler = require("../handlers/eventHandler/updateEventStatusHandler");
 const getEventHandler = require("../handlers/eventHandler/getEventHandler");
+const getAllEventsStripePriceHandler = require("../handlers/eventHandler/getAllEventsStripePriceHandler");
 const uploadSingleImage = require("../middlewares/uploadSingleImage");
 
 router.route("/getallevents").get(getAllEventsHandler);
+router.route("/getallevents/stripeprice").get(getAllEventsStripePriceHandler);
 router.route("/getallevents/:id").get(getEventHandler);
 router.route("/registerevent/:id").post(uploadSingleImage,registerEventHandler);
 router.route("/updateevent/:idUser/:idEvent").put(updateEventHandler);
