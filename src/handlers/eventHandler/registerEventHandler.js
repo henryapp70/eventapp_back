@@ -3,6 +3,7 @@ const { cloudinary } = require("../../utils/cloudinary");
 
 const registerEventHandler = async (req, res) => {
   const { id } = req.params;
+  
   const eventData = req.body;
   let imageURL = "";
   if (!req.file) {
