@@ -1,9 +1,10 @@
-const { Event, Sponsor, User } = require("../../db");
+const { Event, Event_Sponsor, User } = require("../../db");
 
-const registerEventController = async (userId, eventData, imageURL) => {
-  console.log(imageURL)
+const registerEventController = async (eventData) => {
+  console.log("eventData.image---->",eventData.image)
+  console.log("eventData.id_user-->",eventData.id_user)
   try {
-    const user = await User.findByPk(userId);
+    const user = await User.findByPk(eventData.id_user);
     if (!user) {
       return { success: false, msg: "User not found" };
     }
@@ -14,16 +15,27 @@ const registerEventController = async (userId, eventData, imageURL) => {
 
     const event = await Event.create({
       ...eventData,
-      image:[imageURL],
-      id_user: userId,
     });
-
-    if (eventData.sponsors && eventData.sponsors.length > 0) {
-      for (const sponsorId of eventData.sponsors) {
-        const sponsor = await Sponsor.findByPk(sponsorId);
-        if (sponsor) {
-          await event.addSponsor(sponsor);
-        }
+    const id_event=event.dataValues.id_event
+    console.log('event--->', event.dataValues);
+    console.log('id_event--->', id_event);
+    console.log('evenData--->', eventData);
+    if (eventData.sponsor.length > 0) {
+      await Event_Sponsor.create({
+        id_event   : id_event,
+        id_sponsor : eventData.sponsor[0]
+      });
+      if(eventData.sponsor[1]){
+        await Event_Sponsor.create({
+          id_event   : id_event,
+          id_sponsor : eventData.sponsor[1]
+        });
+      }
+      if(eventData.sponsor[2]){
+        await Event_Sponsor.create({
+          id_event   : id_event,
+          id_sponsor : eventData.sponsor[2]
+        });
       }
     }
 
